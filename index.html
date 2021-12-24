@@ -1,0 +1,86 @@
+<center><canvas width="600" height="400"></canvas></center>
+
+<script>
+
+const tela = document.querySelector('canvas');
+    
+    var pincel = tela.getContext('2d');
+        pincel.fillStyle = 'green';
+        pincel.fillRect(0, 0, 600, 400);
+
+        // circulo verde central
+        pincel.fillStyle = 'white';
+        pincel.beginPath();
+        pincel.arc(300, 200, 60, 0, 2 * 3.14);
+        pincel.fill();
+
+        //circulo verde central menor
+        pincel.fillStyle = 'green';
+        pincel.beginPath();
+        pincel.arc(300, 200, 58, 0, 2 * 3.14);
+        pincel.fill();
+
+        //linha que corta o campo ao meio
+        pincel.fillStyle = 'white';
+        pincel.beginPath();
+        pincel.moveTo(300, 0);
+        pincel.lineTo(300, 400);
+        pincel.lineTo(298, 400);
+        pincel.lineTo(298, 0);
+        pincel.fill();
+	
+        //marca central da bola
+        pincel.fillStyle = 'white';
+        pincel.beginPath();
+        pincel.arc(299, 200, 5, 0, 2 * 3.14);
+        pincel.fill();
+	
+        //linhas area esquerda
+        pincel.fillStyle = 'white';
+        pincel.beginPath();
+        pincel.moveTo(0, 100);
+        pincel.lineTo(122, 100);
+        pincel.lineTo(122, 300);
+        pincel.lineTo(0, 300);
+        pincel.fill();
+        
+        pincel.fillStyle = 'green';
+        pincel.beginPath();
+        pincel.moveTo(0, 102);
+        pincel.lineTo(120, 102);
+        pincel.lineTo(120, 298);
+        pincel.lineTo(0, 298);
+        pincel.fill();
+
+        //linhas area direita
+        pincel.fillStyle = 'white';
+        pincel.beginPath();
+        pincel.moveTo(600, 100);
+        pincel.lineTo(478, 100);
+        pincel.lineTo(478, 300);
+        pincel.lineTo(600, 300);
+        pincel.fill();
+        
+        pincel.fillStyle = 'green';
+        pincel.beginPath();
+        pincel.moveTo(600, 102);
+        pincel.lineTo(480, 102);
+        pincel.lineTo(480, 298);
+        pincel.lineTo(600, 298);
+        pincel.fill();
+
+function desenhaCirculo(x, y, raio) {
+
+        pincel.fillStyle = 'blue';
+        pincel.beginPath();
+        pincel.arc(x, y, raio, 0, 2 * Math.PI);
+        pincel.fill();
+        }
+
+        desenhaCirculo(300, 200, 20)
+
+        
+    
+
+</script>
+
