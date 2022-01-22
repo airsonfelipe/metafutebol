@@ -1,8 +1,11 @@
 //bola
-xBola = 294;
-yBola = 220;
+let xBola = 294;
+let yBola = 220;
+let larguraBola = 12;
+let alturaBola = 12
 
 
 function bola() {
-  image(imagemBola, xBola, yBola, 12, 12);
+  image(imagemBola, xBola, yBola, larguraBola, alturaBola);
 }
+
